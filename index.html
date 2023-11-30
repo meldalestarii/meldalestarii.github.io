@@ -1,17 +1,109 @@
 <<!DOCTYPE html>
 <html>
 <body>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+</style>
+</head>
+<body>
 
 <ul>
   <li><a href="#home">Home</a></li>
   <li><a href="#news">News</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li><a href="#about">About</a></li>
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Dropdown</a>
+    <div class="dropdown-content">
+      <a href="FORM.HTML">FORM LIBRARY</a>
+      <a href="TABLE.HTML">TABLE</a>
+      <a href="FORM PEMINJAMAN DAN PEMESANAN.HTML">FORM PEMINJJAMAN DAN PEMESANAN</a>
+	     <a href="https://melda.fantasticfive.xyz/index.php?p=member&sec=title_basket">SENAYAN</a>
+    </div>
+  </li>
 </ul>
 
-<p>Note: We use href="#" for test links. In a real web site this would be URLs.</p>
-<head>
-<title>Perpustakaan Melda Lia Lestari</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+  $("#flip").click(function(){
+    $("#panel").slideDown(5000);
+  });
+  $("#stop").click(function(){
+    $("#panel").stop();
+  });
+});
+</script>
+<style> 
+#panel, #flip {
+  padding: 5px;
+  font-size: 18px;
+  text-align: center;
+  background-color: #555;
+  color: white;
+  border: solid 1px #666;
+  border-radius: 3px;
+}
+
+#panel {
+  padding: 50px;
+  display: none;
+}
+</style>
+</head>
+<body>
+ 
+<button id="stop">Stop sliding</button>
+
+<div id="flip">Click to slide down panel</div>
+<div id="panel"><title>Perpustakaan Melda Lia Lestari</title>
 </head>
 <body>
 <h1>Perpustakaan Melda Lia Lestari</h1>
@@ -29,85 +121,7 @@
   </head>
   <body>
     <h1>Hello, Selamat Datang di Website Perpustakaan LESTARI BACA </h1>
-    <nav class="navbar navbar-default">
-    <div class="container-fuild">
-    <!-- Brand and toggle get grouped for better mobile display-->
-    <div class="navbar-header">
-    <button type="button" class="navbar-toggle collasped" data-toggle="collasped"data-target="#bs-example-navbar-collapse-1"aria-expanded="false">
-    <span class="sr-only">toggle navigation</span>
-    <span class="icon-bar"></span>
-    <span class="icon-bar"></span>
-    <span class="icon-bar"></span>
-    </button>
-    <a class="navbar-brand" href="#">Brand </a>
-    </div>
-    <!-- Collect the nav links,froms,and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-colapse-I">
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="#">link <span (current)></span></a></li>
-                <li><a href="#"> Link </a></li>
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"aria-expanded="false">dropdown<spanclass="caret"></span></a>
-                <li><a href="#"> Action</a></li>
-                <li><a href="#">another action</a></li>
-                <li><a href="#">something else here</a></li>
-                <li role="seperator" class="divider"></li>
-                <li><a href="#">one more seperated link</a> </li></ul></li></ul>
-                <form class="navbar-form navbar-left">
-                <div class="form-group
-                 <input type="text" class="form-control" placeholder="search">
-            </div>
-            <button type="submit" class="btn btn-default">submit</button>
-        </form>
-        <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Link</a></li>
-        <li class="dropdown">
-            <a href="#"class="dropdown-toggle"data-toggle="dropdown"role="button"ariahaspopup="true"ariaexpanded="false">dropdown
-            <spanclass="caret"></span></a><ul class="dropdown-menu">
-            <li><a href="#">action</a></li>
-            <li><a href="#">another action</a>
-            <li role="separator"class="divider"></li>
-            </ul></li></ul></div> <!--/.navbar-collapse-->
-    </div><!--/.container-fuild-->
-    </nav>
-
-    <div class="mb-3">
-      <label for="exampleFormControlInput1" class="form-label">Email address</label>
-      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-    </div>
-    <div class="mb-3">
-      <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-    </div>
-
-    <table class="table">
-      <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">First</th>
-          <th scope="col">Last</th>
-          <th scope="col">Handle</th>
-        </tr>
-      </thead>
-      <tbody class="table-group-divider">
-        <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td colspan="2">Larry the Bird</td>
-          <td>@twitter</td>
-        </tr>
-      </tbody>
-    </table>
+   
 <p> <a href="https://library.usu.ac.id/"><i><b>Profil Perpustakaan Universitas Sumatera Utara</b></i></a>
 <p> Berikut ini adalah gambar Perpustakaan Universitas Sumatera Utara :</p>
 	<p><img src="images/foto perpustakaan.jpg" Width="200" Height="150" alt=/></p>
@@ -121,213 +135,17 @@
 <p>Video dari Youtube</p>
 <video controls="true">
 <source src ="images/usu perpus.mp4" type="video/mp4"></video>
-<p><b><h3>FORM LIBRARY</h3></b>
-<form action="" method="post">
-<table>
-    <th>Formulir Aggota Perpustakaan</th>
-	<tr>
-        <td>Nama</td>
-        <td><input type="text"></td>
-    </tr>
-    <tr>
-        <td>Password</td>
-        <td><input type>
-    </tr>
-    <tr>
-        <td>ID Anggota</td>
-        <td><input type="number"></td>
-    </tr>
-    <tr>
-        <td>Tanggal Lahir</td>
-        <td><input type="data"></td>
-    </tr>
-    <tr>
-        <td>Jenis Kelamin</td>
-        <td><input type="radio" name="jk"> laki-laki
-            <input type="radio" name="jk"> perempuan</td>
-    </tr>
-    <tr>
-        <td>Jabatan</td>
-        <td><select>
-            <option>Mahasiswa</option>
-            <option>Staf</option>
-        </select>
-        </td>
-    </tr>
-    <tr>
-        <td>Alamat</td>
-        <td><textarea></textarea></td>
-    </tr>
-    <tr>
-        <td></td>
-        <td><input type="submit" value="simpan">
-            <input type="reset" value="reset">
-            <input type="button" value="kembali">
-        </td>
-    </tr>
-</table>
-</form>
-<table border="i">
-<caption><b>Table Bahan Buku</b></caption>
-<th>Nama Peminjam</th>
-<th>Judul Buku</th>
-<th>Tanggal Peminjaman</th>
-<th>Tanggal Pengembalian</th>
-<th>Nama Pengarang</th>
-<tr>
-     <td>Sofianita Lubis</td>
-     <td>Teknologi Informasi dan Komunikasi</td>
-     <td>1-9-2023</td>
-     <td>1-10-2023</td>
-	 <td>Singgih Santoso</td>
-</tr>
-<tr>
-	 <td>Rina Khairunnisa</td>
-     <td>Etika & Hukum Kesehatan</td>
-     <td>12-9-2023</td>
-     <td>13-10-2023</td>
-	 <td>Hendrik</td>
-</tr>
-<tr>
-	 <td>Syafira Ramadhani</td>
-     <td>Pembangunan Ekonomi Perkotaan</td>
-     <td>13-9-2023</td>
-     <td>14-10-2023</td>
-	 <td>Adisasmita, Rahardjo</td>
-</tr>
-<tr>
-	 <td>Suci Ramadhani</td>
-     <td>Konsep Dasar Epidemiologi</td>
-     <td>12-9-2023</td>
-     <td>13-10-2023</td>
-	 <td>Dyan Kunthi Nugrahaeni</td>
-</tr>
-<tr>
-	 <td>Ilham Satrio</td>
-     <td>Akuntansi Sektor Publik</td>
-     <td>14-9-2023</td>
-     <td>15-10-2023</td>
-	 <td>Mahmudi</td>
-</tr>
-</table>
-<h3>FORM PEMESANAN BUKU</h3>
-<form action="" method="post">
-<table>
-    <tr>
-        <td>Nama</td>
-        <td><input type="text"></td>
-    </tr>
-    <tr>
-        <td>Password</td>
-        <td><input type>
-    </tr>
-    <tr>
-        <td>ID Anggota</td>
-        <td><input type="number"></td>
-    </tr>
-    <tr>
-        <td>Tanggal Peminjaman</td>
-        <td><input type="data"></td>
-    </tr>
-    <tr>
-        <td>Jenis Kelamin</td>
-        <td><input type="radio" name="jk"> laki-laki
-            <input type="radio" name="jk"> perempuan
-        </td>
-    </tr>
-    <tr>
-        <td>Jabatan</td>
-        <td><select>
-            <option>Mahasiswa</option>
-            <option>Staf</option>
-        </select>
-        </td>
-    </tr>
-	<tr>
-        <td>Buku Yang Dipinjam</td>
-        <td><input type="text"></td>
-    </tr>
-	<tr>
-        <td>Email</td>
-        <td><input type="text"></td>
-    </tr>
-	<tr>
-        <td>No. Hp</td>
-        <td><input type="text"></td>
-    </tr>
-    <tr>
-        <td>Alamat</td>
-        <td><textarea></textarea></td>
-    </tr>
-    <tr>
-        <td></td>
-        <td><input type="submit" value="simpan">
-            <input type="reset" value="reset">
-            <input type="button" value="kembali">
-        </td>
-    </tr>
-</table>
-</form>
-<p>
-<h3>FORM PERPANJANGAN PEMINJAMAN BUKU</h3>
-    
-<form action="" method="post">
-<table>
-    <tr>
-        <td>Nama</td>
-        <td><input type="text"></td>
-    </tr>
-    <tr>
-        <td>Password</td>
-        <td><input type>
-    </tr>
-    <tr>
-        <td>ID Anggota</td>
-        <td><input type="number"></td>
-    </tr>
-    <tr>
-        <td>Tanggal Perpanjangan</td>
-        <td><input type="data"></td>
-    </tr>
-    <tr>
-        <td>Jenis Kelamin</td>
-        <td><input type="radio" name="jk"> laki-laki
-            <input type="radio" name="jk"> perempuan
-        </td>
-    </tr>
-    <tr>
-        <td>Jabatan</td>
-        <td><select>
-            <option>Mahasiswa</option>
-            <option>Staf</option>
-        </select>
-        </td>
-    </tr>
-	<tr>
-        <td>Buku Yang Mau Diperpanjang</td>
-        <td><input type="text"></td>
-    </tr>
-	<tr>
-        <td>Email</td>
-        <td><input type="text"></td>
-    </tr>
-	<tr>
-        <td>No. Hp</td>
-        <td><input type="text"></td>
-    </tr>
-    <tr>
-        <td>Alamat</td>
-        <td><textarea></textarea></td>
-    </tr>
-    <tr>
-        <td></td>
-        <td><input type="submit" value="simpan">
-            <input type="reset" value="reset">
-            <input type="button" value="kembali">
-        </td>
-    </tr>
-</table>
-</form>
+</div>
+
+<h2>My First JavaScript</h2>
+
+<button type="button"
+onclick="document.getElementById('demo').innerHTML = Date()">
+Click me to display Date and Time.</button>
+
+<p id="demo"></p>
+
+
 	<!DOCTYPE html>
 <html lang="en">
     <title>Contoh Inline CSS</title>
