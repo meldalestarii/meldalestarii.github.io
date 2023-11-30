@@ -1,0 +1,216 @@
+<<!DOCTYPE html>
+<html>
+<body>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+</style>
+</head>
+<body>
+
+<ul>
+  <li><a href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Dropdown</a>
+    <div class="dropdown-content">
+      <a href="FORM.HTML">FORM LIBRARY</a>
+      <a href="TABLE.HTML">TABLE</a>
+      <a href="FORM PEMINJAMAN DAN PEMESANAN.HTML">FORM PEMINJJAMAN DAN PEMESANAN</a>
+	     <a href="https://melda.fantasticfive.xyz/index.php?p=member&sec=title_basket">SENAYAN</a>
+    </div>
+  </li>
+</ul>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+  $("#flip").click(function(){
+    $("#panel").slideDown(5000);
+  });
+  $("#stop").click(function(){
+    $("#panel").stop();
+  });
+});
+</script>
+<style> 
+#panel, #flip {
+  padding: 5px;
+  font-size: 18px;
+  text-align: center;
+  background-color: #555;
+  color: white;
+  border: solid 1px #666;
+  border-radius: 3px;
+}
+
+#panel {
+  padding: 50px;
+  display: none;
+}
+</style>
+</head>
+<body>
+ 
+<button id="stop">Stop sliding</button>
+
+<div id="flip">Click to slide down panel</div>
+<div id="panel"><title>Perpustakaan Melda Lia Lestari</title>
+</head>
+<body>
+<h1>Perpustakaan Melda Lia Lestari</h1>
+<h2>D-III Perpustakaan Universitas Sumatera Utara</h2>
+<p>Perkenalkan, nama saya Melda Lia Lestari, saya adalah mahasiswa ilmu perpustakaan
+<i>Ini Homepage</i> pertama saya, 
+<p>karena saya baru belajar tentang cara membuat <b><i>homepage</i></b>
+</p>
+	<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><b></b>Melda Lia Lestari</b></title>
+  </head>
+  <body>
+    <h1>Hello, Selamat Datang di Website Perpustakaan LESTARI BACA </h1>
+   
+<p> <a href="https://library.usu.ac.id/"><i><b>Profil Perpustakaan Universitas Sumatera Utara</b></i></a>
+<p> Berikut ini adalah gambar Perpustakaan Universitas Sumatera Utara :</p>
+	<p><img src="images/foto perpustakaan.jpg" Width="200" Height="150" alt=/></p>
+	<p> Perpustakaan Universitas Sumatera Utara merupakan unit penunjang kegiatan pendidikan, 
+	pengajaran, penelitian, dan pengabdian kepada masyarakat di Universitas Sumatera Utara</b></i></a></p>
+<p> Berikut ini merupakan audio Perpustakaan Universitas Sumatera Utara :</p>
+<p>
+<audio controls>
+<source src = "images/musik.mp3" alt="audio/mpeg">
+<p><b>Video Perpustakaan Universitas Sumatera Utara</b></p>
+<p>Video dari Youtube</p>
+<video controls="true">
+<source src ="images/usu perpus.mp4" type="video/mp4"></video>
+</div>
+
+<h2>My First JavaScript</h2>
+
+<button type="button"
+onclick="document.getElementById('demo').innerHTML = Date()">
+Click me to display Date and Time.</button>
+
+<p id="demo"></p>
+
+
+	<!DOCTYPE html>
+<html lang="en">
+    <title>Contoh Inline CSS</title>
+<body>
+    <h1 style="color: gold; font-family: Times New Roman;">Ini adalah judul dengan inline style</h1>
+    <p style="color: green; font-size: 17px;">Ini adalah paragraph dengan inline styles.</p>
+</body>
+
+</html>
+
+<html lang="en">
+<head>
+    <title>Contoh Internal CSS</title>
+    <style>
+        h1 {
+            color: gold;
+            font-family: Times New Roman,
+        }
+
+        p {
+            color: green;
+            font-size: 16px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Ini adalah judul dengan internal style</h1>
+    <p>Ini adalah paragraph dengan internal style.</p>
+</body>
+</html>
+
+<html lang="en">
+<head>
+    
+    <title>Contoh Eksternal CSS</title>
+    <link rel="stylesheet" href="styles.css">
+	<style>
+		h1 {
+			color: gold;
+			font-family: Times New Roman,
+		}
+
+		p {
+			color: green;
+			font-size: 16px;
+		}
+	
+    </style>
+</head>
+<body>
+    <h1>Ini adalah judul dengan eksternal style</h1>
+    <p>Ini adalah paragraph dengan external style.</p>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Pengertian HTML dan CSS</title>
+</head>
+<body>
+	<h1> Pengertian HTML dan CSS </h1>
+    <p>HTML adalah bahasa markup standar yang digunakan untuk membuat struktur dan konten halaman web. Dalam HTML, pengembang web mendefinisikan elemen-elemen seperti teks, gambar, tautan, formulir, dan elemen lainnya yang membentuk tampilan halaman web. HTML menggunakan tag-tag untuk menandai elemen-elemen ini sehingga peramban web tahu cara menampilkan mereka.</p>
+
+    <p>CSS adalah bahasa stylesheet yang digunakan untuk mengontrol tata letak dan tampilan halaman web. Dengan CSS, Anda dapat mengatur warna, ukuran, spasi, jenis font, dan banyak properti tata letak lainnya untuk elemen-elemen HTML. Penggunaan CSS memungkinkan pemisahan antara struktur dan tata letak, sehingga HTML dapat fokus pada struktur konten, sementara CSS mengontrol cara konten tersebut ditampilkan.</p>
+</body>
+</html>
